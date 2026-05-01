@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مائدة الشام - الوجبات</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="logo">مائدة <span>الشام</span></div>
+        <ul class="nav-links">
+            <li><a href="home.html">الرئيسية</a></li>
+            <li><a href="AboutUs.html">من نحن</a></li>
+            <li><a href="Meals.html" class="active">الوجبات</a></li>
+        </ul>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero">
+        <h1>قائمة الوجبات</h1>
+        <p>اختر من بين ألذ الأطباق العربية الأصيلة</p>
+    </section>
+
+    <!-- المحتوى -->
+    <div class="container">
+
+        <!-- جدول الوجبات -->
+        <div class="card">
+            <h2>الوجبات المتوفرة</h2>
+            <div class="alert alert-error" id="alert-no-selection">الرجاء اختيار وجبة واحدة على الأقل قبل المتابعة.</div>
+            <table id="meals-table">
+                <thead>
+                    <tr>
+                        <th>الرمز</th>
+                        <th>الصورة</th>
+                        <th>الوجبة</th>
+                        <th>السعر</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>اختيار</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- الوجبة 1 -->
+                    <tr>
+                        <td>SF-001</td>
+                        <td><img src="images/meal1.jpg" alt="مشاوي مشكلة" class="meal-img"></td>
+                        <td>مشاوي مشكلة لشخصين</td>
+                        <td>185,000 ل.س</td>
+                        <td><input type="checkbox" class="chk-details" data-meal="1"></td>
+                        <td><input type="checkbox" class="chk-select" data-code="SF-001" data-name="مشاوي مشكلة لشخصين" data-price="185000"></td>
+                    </tr>
+                    <tr class="details-row" id="details-1">
+                        <td colspan="6">
+                            <div class="meal-details" id="meal-details-1">
+                                <h4>مشاوي مشكلة لشخصين</h4>
+                                <div class="detail-row"><strong>المطبخ:</strong> الشامي</div>
+                                <div class="detail-row"><strong>تصنيف الطعام:</strong> مشويات</div>
+                                <div class="detail-row"><strong>المكونات:</strong></div>
+                                <ul>
+                                    <li>4 أسياخ كباب لحم غنم طازج</li>
+                                    <li>4 أسياخ شقف دجاج متبّل</li>
+                                    <li>2 سيخ كفتة بالبقدونس والبصل</li>
+                                    <li>طبق حمص بالطحينة</li>
+                                    <li>سلطة فتوش طازجة</li>
+                                    <li>خبز عربي طازج</li>
+                                    <li>مخللات مشكلة</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- الوجبة 2 -->
+                    <tr>
+                        <td>SF-002</td>
+                        <td><img src="images/meal2.jpg" alt="فتة حمص" class="meal-img"></td>
+                        <td>فتة حمص بالسمنة</td>
+                        <td>45,000 ل.س</td>
+                        <td><input type="checkbox" class="chk-details" data-meal="2"></td>
+                        <td><input type="checkbox" class="chk-select" data-code="SF-002" data-name="فتة حمص بالسمنة" data-price="45000"></td>
+                    </tr>
+                    <tr class="details-row" id="details-2">
+                        <td colspan="6">
+                            <div class="meal-details" id="meal-details-2">
+                                <h4>فتة حمص بالسمنة</h4>
+                                <div class="detail-row"><strong>المطبخ:</strong> الشامي</div>
+                                <div class="detail-row"><strong>تصنيف الطعام:</strong> مقبلات رئيسية</div>
+                                <div class="detail-row"><strong>المكونات:</strong></div>
+                                <ul>
+                                    <li>حمص مسلوق طري</li>
+                                    <li>خبز عربي محمّص ومقطّع</li>
+                                    <li>طحينة طبيعية</li>
+                                    <li>سمنة عربية ساخنة</li>
+                                    <li>صنوبر محمّص</li>
+                                    <li>ليمون طازج وملح</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- الوجبة 3 -->
+                    <tr>
+                        <td>SF-003</td>
+                        <td><img src="images/meal3.jpg" alt="كبة مقلية" class="meal-img"></td>
+                        <td>كبة مقلية (10 حبات)</td>
+                        <td>65,000 ل.س</td>
+                        <td><input type="checkbox" class="chk-details" data-meal="3"></td>
+                        <td><input type="checkbox" class="chk-select" data-code="SF-003" data-name="كبة مقلية (10 حبات)" data-price="65000"></td>
+                    </tr>
+                    <tr class="details-row" id="details-3">
+                        <td colspan="6">
+                            <div class="meal-details" id="meal-details-3">
+                                <h4>كبة مقلية (10 حبات)</h4>
+                                <div class="detail-row"><strong>المطبخ:</strong> الشامي / الحلبي</div>
+                                <div class="detail-row"><strong>تصنيف الطعام:</strong> مقبلات</div>
+                                <div class="detail-row"><strong>المكونات:</strong></div>
+                                <ul>
+                                    <li>برغل ناعم منقوع</li>
+                                    <li>لحم غنم مفروم ناعم</li>
+                                    <li>بصل مفروم ناعم</li>
+                                    <li>صنوبر محمّص</li>
+                                    <li>سمنة عربية</li>
+                                    <li>بهارات كبة (قرفة، فلفل أسود، بهار حلو)</li>
+                                    <li>زيت نباتي للقلي</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- الوجبة 4 -->
+                    <tr>
+                        <td>SF-004</td>
+                        <td><img src="images/meal4.jpg" alt="شاورما دجاج" class="meal-img"></td>
+                        <td>صحن شاورما دجاج</td>
+                        <td>55,000 ل.س</td>
+                        <td><input type="checkbox" class="chk-details" data-meal="4"></td>
+                        <td><input type="checkbox" class="chk-select" data-code="SF-004" data-name="صحن شاورما دجاج" data-price="55000"></td>
+                    </tr>
+                    <tr class="details-row" id="details-4">
+                        <td colspan="6">
+                            <div class="meal-details" id="meal-details-4">
+                                <h4>صحن شاورما دجاج</h4>
+                                <div class="detail-row"><strong>المطبخ:</strong> الشامي</div>
+                                <div class="detail-row"><strong>تصنيف الطعام:</strong> وجبات رئيسية</div>
+                                <div class="detail-row"><strong>المكونات:</strong></div>
+                                <ul>
+                                    <li>صدور دجاج متبّلة ومشوية على السيخ الدوار</li>
+                                    <li>مخللات مشكلة</li>
+                                    <li>بطاطا مقلية</li>
+                                    <li>ثومية منزلية</li>
+                                    <li>سلطة خضراء</li>
+                                    <li>خبز صاج</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- الوجبة 5 -->
+                    <tr>
+                        <td>SF-005</td>
+                        <td><img src="images/meal5.jpg" alt="ورق عنب" class="meal-img"></td>
+                        <td>ورق عنب باللحم</td>
+                        <td>75,000 ل.س</td>
+                        <td><input type="checkbox" class="chk-details" data-meal="5"></td>
+                        <td><input type="checkbox" class="chk-select" data-code="SF-005" data-name="ورق عنب باللحم" data-price="75000"></td>
+                    </tr>
+                    <tr class="details-row" id="details-5">
+                        <td colspan="6">
+                            <div class="meal-details" id="meal-details-5">
+                                <h4>ورق عنب باللحم</h4>
+                                <div class="detail-row"><strong>المطبخ:</strong> الشامي</div>
+                                <div class="detail-row"><strong>تصنيف الطعام:</strong> وجبات رئيسية</div>
+                                <div class="detail-row"><strong>المكونات:</strong></div>
+                                <ul>
+                                    <li>ورق عنب طازج مسلوق</li>
+                                    <li>أرز مصري قصير الحبة</li>
+                                    <li>لحم غنم مفروم</li>
+                                    <li>بندورة مفرومة ناعم</li>
+                                    <li>بصل مفروم</li>
+                                    <li>بقدونس ونعنع طازج</li>
+                                    <li>عصير ليمون وزيت زيتون</li>
+                                    <li>بهارات (فلفل حلو، قرفة، ملح)</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- الوجبة 6 -->
+                    <tr>
+                        <td>SF-006</td>
+                        <td><img src="images/meal6.jpg" alt="منسف عربي" class="meal-img"></td>
+                        <td>منسف عربي لأربعة أشخاص</td>
+                        <td>220,000 ل.س</td>
+                        <td><input type="checkbox" class="chk-details" data-meal="6"></td>
+                        <td><input type="checkbox" class="chk-select" data-code="SF-006" data-name="منسف عربي لأربعة أشخاص" data-price="220000"></td>
+                    </tr>
+                    <tr class="details-row" id="details-6">
+                        <td colspan="6">
+                            <div class="meal-details" id="meal-details-6">
+                                <h4>منسف عربي لأربعة أشخاص</h4>
+                                <div class="detail-row"><strong>المطبخ:</strong> العربي التقليدي</div>
+                                <div class="detail-row"><strong>تصنيف الطعام:</strong> وجبات رئيسية / مناسبات</div>
+                                <div class="detail-row"><strong>المكونات:</strong></div>
+                                <ul>
+                                    <li>لحم غنم مطبوخ بالجميد</li>
+                                    <li>أرز بسمتي طويل الحبة</li>
+                                    <li>جميد بلدي أصلي</li>
+                                    <li>سمنة عربية</li>
+                                    <li>لوز وصنوبر محمّص</li>
+                                    <li>خبز شراك رقيق</li>
+                                    <li>بقدونس طازج للتزيين</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="btn-container">
+                <button class="btn btn-primary" id="btn-continue" onclick="showOrderForm()">متابعة</button>
+            </div>
+        </div>
+
+        <!-- نموذج الطلب -->
+        <div class="card order-form" id="order-form">
+            <h2>معلومات الطلب</h2>
+            <div class="alert alert-error" id="alert-form-error"></div>
+            <div class="alert alert-success" id="alert-form-success">تم التحقق من جميع البيانات بنجاح!</div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>الاسم الكامل <span class="optional">(اختياري — أحرف عربية فقط)</span></label>
+                    <input type="text" id="fullName" placeholder="مثال: أحمد محمد العلي">
+                    <div class="error-msg" id="err-name"></div>
+                </div>
+                <div class="form-group">
+                    <label>الرقم الوطني <span class="required">(إجباري)</span></label>
+                    <input type="text" id="nationalId" placeholder="مثال: 01234567890" maxlength="11">
+                    <div class="hint">11 خانة — أول خانتين ترمزان إلى المحافظة (01 إلى 14)</div>
+                    <div class="error-msg" id="err-nid"></div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>تاريخ الولادة <span class="optional">(اختياري)</span></label>
+                    <input type="text" id="birthDate" placeholder="dd-mm-yyyy">
+                    <div class="hint">الصيغة: dd-mm-yyyy</div>
+                    <div class="error-msg" id="err-bdate"></div>
+                </div>
+                <div class="form-group">
+                    <label>رقم الموبايل <span class="optional">(اختياري)</span></label>
+                    <input type="text" id="mobile" placeholder="مثال: 0935123456" maxlength="10">
+                    <div class="hint">أرقام شبكتي Syriatel و MTN فقط</div>
+                    <div class="error-msg" id="err-mobile"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>البريد الإلكتروني <span class="optional">(اختياري)</span></label>
+                <input type="text" id="email" placeholder="مثال: example@mail.com">
+                <div class="error-msg" id="err-email"></div>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn btn-submit" id="btn-submit" onclick="submitOrder()">إرسال الطلب</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- نافذة النتيجة -->
+    <div class="result-overlay" id="result-overlay">
+        <div class="result-box" id="result-box">
+            <button class="close-btn" onclick="closeResult()">&times;</button>
+            <h2>تفاصيل طلبكم</h2>
+            <div id="result-content"></div>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; 2026 — <span>مائدة الشام</span> — مشروع تعليمي لمادة IWB202</p>
+    </footer>
+
+    <script src="myFunctions.js"></script>
+
+</body>
+</html>
